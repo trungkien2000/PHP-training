@@ -43,9 +43,10 @@ include("auth_session.php");
                 while ($row = $query->fetch_assoc()) {
                     $imageURL = $row["filename"];
             ?>
-
-                    <img src="<?php echo $imageURL; ?>" alt="" style="width:200px; height:auto" />
-
+                    <div class="row">
+                        <img src="<?php echo $imageURL; ?>" alt="" style="width:200px; height:auto" />
+                        <a href="<?php echo "download.php?path=" . $imageURL ?>">Download</a>
+                    </div>
                 <?php }
             } else { ?>
                 <p>No image(s) found...</p>
