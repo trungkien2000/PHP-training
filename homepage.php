@@ -44,7 +44,12 @@ include("auth_session.php");
                     $imageURL = $row["filename"];
             ?>
                     <div class="row">
-                        <img src="<?php echo $imageURL; ?>" alt="" style="width:200px; height:auto" />
+                        <?php
+                        $imageData = base64_encode(file_get_contents($imageURL));
+                        echo '<img style="width:200px; height:auto" alt=' . $imageURL . ' src="data:image/jpeg;base64,' . $imageData . '">';
+                        ?>
+                        <!-- <img src="<?php echo $imageURL; ?>" alt="" style="width:200px; height:auto" /> -->
+
                         <a href="<?php echo "download.php?path=" . $imageURL ?>">Download</a>
                     </div>
                 <?php }

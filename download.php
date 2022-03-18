@@ -1,5 +1,5 @@
 <?php
-include("homepage.php");
+// include("homepage.php");
 
 if (isset($_GET['path'])) {
     //Read the filename
