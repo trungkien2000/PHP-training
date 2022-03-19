@@ -18,11 +18,18 @@ include("auth_session.php");
 <body>
     <div class="container">
         <div class="row">
-            <h2 class="col-md-8">Hi <?php echo $_SESSION['username']; ?> !</h2>
+            <h2 class="col-md-2">Hi <?php echo $_SESSION['username']; ?> !</h2>
+            <div class="col-md-6" style="width:100%">
+                <form action="search.php" method="get" class="form-inline">
+                    <input type="text" name="search" class="form-control" placeholder="Search by username or name..." style="width:80%">
+                    <button class="btn btn-primary" type="submit" name="submit">Search</button>
+                </form>
+            </div>
             <div class="col-md-4" style="width:10%">
                 <a type="button" class="btn btn-danger" href="logout.php">Logout</a>
             </div>
         </div>
+
         <div>
             <h3>Upload file here</h3>
             <form action="upload.php" method="post" enctype="multipart/form-data">
