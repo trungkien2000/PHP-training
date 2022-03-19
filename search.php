@@ -41,7 +41,7 @@
                     echo "$num results with <b>$search</b>";
 
                     // Vòng lặp while & mysql_fetch_assoc dùng để lấy toàn bộ dữ liệu có trong table và trả về dữ liệu ở dạng array.
-                    echo '<table border="1" cellspacing="0" cellpadding="10">';
+                    echo '<table border="1" cellspacing="0" cellpadding="10" class="table">';
                     echo '<tr>';
                     echo '<th>Username</th>';
                     echo '<th>Fullname</th>';
